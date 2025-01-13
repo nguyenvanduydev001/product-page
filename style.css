@@ -346,3 +346,272 @@ main {
   border-radius: 7px;
   justify-content: space-between;
 }
+
+.amount-btn button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.add_btn {
+  cursor: pointer;
+  width: 65%;
+  margin-left: 1rem;
+  background-color: var(--Orange);
+  color: var(--White);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 7px;
+  padding: 1rem;
+}
+
+.add_btn:hover {
+  opacity: 70%;
+}
+
+.add_btn img {
+  filter: brightness(5);
+}
+
+/* lightbox styles */
+.lightbox {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lightbox-container {
+  position: relative;
+}
+
+.close-lightbox {
+  position: absolute;
+  top: -40px;
+  right: 10px;
+  color: var(--Orange);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.close-lightbox:hover img {
+  filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
+}
+
+.close-lightbox img {
+  width: 20px;
+  height: 20px;
+}
+
+.lightbox .main-thumbnail {
+  width: 400px;
+}
+
+@media screen and (max-width: 700px) {
+  /* visibility */
+  .hidden {
+    display: flex;
+  }
+
+  .invisible-mod {
+    display: none;
+  }
+
+  /* default */
+  body {
+    position: relative;
+  }
+
+  /* navbar */
+  .nav_container {
+    padding-inline: 1rem;
+  }
+
+  .nav_left-sec {
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .menu {
+    cursor: pointer;
+  }
+
+  .close-btn {
+    cursor: pointer;
+  }
+
+  .overlay {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .overlay {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--Black);
+    opacity: 75%;
+    display: none;
+  }
+
+  .nav_links {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    z-index: 999;
+    gap: 2;
+    padding: 2rem;
+    align-items: flex-start;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    background-color: var(--White);
+  }
+
+  .nav_link:hover::after {
+    bottom: -15px;
+  }
+
+  .active {
+    display: flex;
+  }
+
+  .nav_link {
+    height: fit-content;
+    font-weight: 700;
+    color: var(--Black);
+  }
+
+  .nav_right-sec {
+    gap: 1.5rem;
+  }
+
+  .avatar {
+    width: 30px;
+  }
+
+  /* main */
+  main {
+    flex-direction: column;
+    align-items: center;
+    margin-inline: 0;
+    height: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .thumbnails {
+    height: 40%;
+  }
+
+  .content {
+    margin: 2rem;
+    height: 50%;
+  }
+
+  .preview {
+    display: none;
+  }
+
+  .mobile-thumb {
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+    min-width: 95vw;
+    margin-top: -0.5rem;
+    z-index: 1;
+  }
+
+  .mobile-thumb img {
+    object-fit: cover;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .price {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .amount-btn {
+    width: 100%;
+  }
+
+  .add_btn {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #next {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    border: 0;
+    background-color: var(--White);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  #previous {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    border: 0;
+    background-color: var(--White);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  #next img,
+  #previous img {
+    width: 15px;
+  }
+}
