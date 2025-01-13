@@ -129,8 +129,8 @@ nav {
   border: none;
 }
 
-.invisible {
-  background-color: var(--Orange);
+.indicator {
+  background-color: orange;
   padding: 0.2rem 0.5rem;
   border-radius: 50%;
   color: var(--White);
@@ -138,6 +138,7 @@ nav {
   top: -15px;
   right: -10px;
 }
+
 
 /* cart styles */
 .cart-container {
