@@ -54,7 +54,7 @@ function nextImage() {
   } else {
     currentImg++;
   }
-  thumbMob.src = `./images/image-product-${currentImg}.ipg`;
+  thumbMob.src = `./images/image-product-${currentImg}.jpg`;
 }
 
 function prevImage() {
@@ -63,7 +63,7 @@ function prevImage() {
   } else {
     currentImg--;
   }
-  thumbMob.src = `./images/image-product-${currentImg}.ipg`;
+  thumbMob.src = `./images/image-product-${currentImg}.jpg`;
 }
 
 function toggleCart() {
@@ -74,7 +74,7 @@ function closeLightbox() {
   lightbox.classList.add("invisible");
 }
 
-function openListBox() {
+function openLightBox() {
   lightbox.classList.remove("invisible");
 }
 
@@ -111,7 +111,7 @@ images.forEach((image) => {
       lastImg[0].classList.remove("selected");
     }
     image.classList.add("selected");
-    const selectedImg = document.querySelector("selected");
+    const selectedImg = document.querySelector(".selected");
     switch (selectedImg.getAttribute("src")) {
       case "./images/image-product-1-thumbnail.jpg":
         mainThumbnail.src = "./images/image-product-1.jpg";
